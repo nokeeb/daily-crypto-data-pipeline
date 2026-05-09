@@ -1,7 +1,5 @@
-from extract import fetch_crypto_data
-
-def transform_data():
-    coinsInfo=fetch_crypto_data()
+def transform_data(data):
+    coinsInfo=data
     coinList=list()
     for coinInfo in coinsInfo:
         coin=dict()

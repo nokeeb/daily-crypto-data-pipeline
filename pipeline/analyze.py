@@ -46,7 +46,7 @@ def analyze_data(filename):
     top3.append(secondBest)
     top3.append(thirdBest)
     data.append(top3)
-    print(data)
+    return data
 
 
 
@@ -55,4 +55,3 @@ def analyze_data(filename):
         
 
 
-analyze_data('test.csv')

@@ -1,5 +1,3 @@
-from transform import transform_data
-data=transform_data()
 def save_to_csv(data,filename):
     fhand=open(filename,'w')
     
@@ -13,5 +11,5 @@ def save_to_csv(data,filename):
         total_volume=line['total_volume']
         price_to_volume_ratio=line['price_to_volume_ratio']
         fhand.write(f'{name},{symbol},{current_price},{market_cap},{total_volume},{price_to_volume_ratio}\n')
-save_to_csv(data,'test.csv')
+
     
