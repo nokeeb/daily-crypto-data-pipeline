@@ -6,7 +6,7 @@ def analyze_data(filename):
         average_price=0
         biggest_cap_coin=None
         current_biggest_cap=0
-        current_lowest_volume=0
+        current_lowest_volume=None
         lowest_volume_coin=None
         temp=dict()
         real_list=None
@@ -21,11 +21,11 @@ def analyze_data(filename):
                     current_biggest_cap=cap
                     biggest_cap_coin=coin_data[0]
                 volume=float(coin_data[4])
-                if(current_lowest_volume==0):
-                    current_lowest_volume=volume
-                if(volume<current_lowest_volume):
+                if(current_lowest_volume is None or volume<current_lowest_volume):
                     current_lowest_volume=volume
                     lowest_volume_coin=coin_data[0]
+                
+                    
                 total_price+=float(coin_data[2])
                 count+=1
                 if coin_data[0] not in temp:
