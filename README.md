@@ -65,14 +65,15 @@ daily-crypto-data-pipeline/
     └── report.py
 ```
 ## Mission - Learning Python
--programming
--variables
--loops
--functions
--data types
--strings
--working with files (.CSV, .TXT)
--using Web services (HTTP requests, API calls, parsing JSON etc..)
+
+- programming
+- variables
+- loops
+- functions
+- data types
+- strings
+- working with files (.CSV, .TXT)
+- using Web services (HTTP requests, API calls, parsing JSON etc..)
 
 ## Author
 
