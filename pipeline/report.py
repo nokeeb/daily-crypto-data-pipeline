@@ -1,9 +1,9 @@
 import datetime
-datum=datetime.date.today()
+todays_date=datetime.date.today()
 def create_report(data):
     fhand=open('report.txt','w')
     top3=data[3]
-    fhand.write(f'''Crypto Report - {datum}
+    fhand.write(f'''Crypto Report - {todays_date}
 Average Price: {data[0]}
 Top Market Cap: {data[1]}
 Lowest Volume: {data[2]}
