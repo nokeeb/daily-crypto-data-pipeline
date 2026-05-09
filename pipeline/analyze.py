@@ -1,53 +1,56 @@
 
 def analyze_data(filename):
-    fhand=open(filename)
-    sum=0
-    count=0
-    averagePrice=0
-    biggestCapCoin=None
-    currentBiggestCap=0
-    currentLowestVolume=0
-    lowestVolumeCoin=None
-    temp=dict()
-    pravaLista=None
-    for line in fhand:
-        if line.startswith('Name'):
-           continue 
-        else:
-            fixedLine=line.rstrip()
-            coinData=fixedLine.split(',')
-            cap=int(coinData[3])
-            if(cap>currentBiggestCap):
-                currentBiggestCap=cap
-                biggestCapCoin=coinData[0]
-            volume=float(coinData[4])
-            if(currentLowestVolume==0):
-                currentLowestVolume=volume
-            if(volume<currentLowestVolume):
-                currentLowestVolume=volume
-                lowestVolumeCoin=coinData[0]
-            sum+=float(coinData[2])
-            count+=1
-            if coinData[0] not in temp:
-                temp[float(coinData[5])]=coinData[0]
-    if(sum is not 0 and count is not 0):       
-        averagePrice=sum/count
-    pravaLista=sorted(temp.items(),reverse=True)
-    firstBest=pravaLista[0]
-    secondBest=pravaLista[1]
-    thirdBest=pravaLista[2]
-    data=list()
-    data.append(averagePrice)
-    data.append(biggestCapCoin)
-    data.append(lowestVolumeCoin)
-   
-    top3=list()
-    top3.append(firstBest)
-    top3.append(secondBest)
-    top3.append(thirdBest)
-    data.append(top3)
-    return data
+    with open(filename,'r',encoding='utf-8') as file:
+        total_price=0
+        count=0
+        average_price=0
+        biggest_cap_coin=None
+        current_biggest_cap=0
+        current_lowest_volume=0
+        lowest_volume_coin=None
+        temp=dict()
+        real_list=None
+        for line in file:
+            if line.startswith('Name'):
+                continue 
+            else:
+                fixed_line=line.rstrip()
+                coin_data=fixed_line.split(',')
+                cap=int(coin_data[3])
+                if(cap>current_biggest_cap):
+                    current_biggest_cap=cap
+                    biggest_cap_coin=coin_data[0]
+                volume=float(coin_data[4])
+                if(current_lowest_volume==0):
+                    current_lowest_volume=volume
+                if(volume<current_lowest_volume):
+                    current_lowest_volume=volume
+                    lowest_volume_coin=coin_data[0]
+                total_price+=float(coin_data[2])
+                count+=1
+                if coin_data[0] not in temp:
+                    temp[float(coin_data[5])]=coin_data[0]
+        if(total_price != 0 and count != 0):       
+            average_price=total_price/count
+        real_list=sorted(temp.items(),reverse=True)
+        first_best=real_list[0]
+        second_best=real_list[1]
+        third_best=real_list[2]
+    
+    
+        top3=list()
+        top3.append(first_best)
+        top3.append(second_best)
+        top3.append(third_best)
+        
+        return{
+            "average_price":average_price,
+            "biggest_cap_coin":biggest_cap_coin,
+            "lowest_volume_coin":lowest_volume_coin,
+            "top3":top3
 
+
+        }
 
 
    

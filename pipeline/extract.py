@@ -12,8 +12,5 @@ def fetch_crypto_data():
         print('Invalid JSON response')
         return[]
 
-    # rawData=urllib.request.urlopen(url)
-    # data=rawData.read().decode()
-    # jsonApiData=json.loads(data)
-    # return jsonApiData
+
      
