@@ -64,12 +64,21 @@ daily-crypto-data-pipeline/
     ├── analyze.py
     └── report.py
 ```
-
+## Mission - Learning Python
+-programming
+-variables
+-loops
+-functions
+-data types
+-strings
+-working with files (.CSV, .TXT)
+-using Web services (HTTP requests, API calls, parsing JSON etc..)
 
 ## Author
 
 GitHub: https://github.com/nokeeb
 
+## Feedback is appreciated
 
 
 
