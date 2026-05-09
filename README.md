@@ -10,14 +10,66 @@ This project fetches cryptocurrency data from CoinGecko API, processes it, and g
 - Data analysis
 - Report generation
 
-## Tutorial
--run main.py with an editor or through the terminal using: python3 main.py
-
-## Note
--You may delete both the crpyto_data.csv and report.txt files as I have left them there just in case someone could use the old version of those files.
-With each run of the pipeline, both files are re-generated.
-
 ## Tech stack
--CSV
--Requests
 -Python
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/nokeeb/daily-crypto-data-pipeline.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd crypto-data-pipeline
+```
+
+Run the pipeline:
+
+```bash
+python main.py
+```
+
+
+
+## Output example (report.txt content)
+```text
+Crypto Report - 2026-05-09
+Average Price: 4244.997577750001
+Top Market Cap: Bitcoin
+Lowest Volume: LEO Token
+Top 3 by Ratio:
+1.LEO Token - 1.9455509660829384e-05
+2.Monero - 3.060533700848879e-06
+3.Bitcoin - 2.875325779057809e-06
+```
+
+
+## Project Structure
+
+```text
+daily-crypto-data-pipeline/
+│
+├── .gitignore
+├── README.md
+├── main.py
+│
+└── pipeline/
+    ├── extract.py
+    ├── transform.py
+    ├── load.py
+    ├── analyze.py
+    └── report.py
+```
+
+
+## Author
+
+GitHub: https://github.com/nokeeb
+
+
+
+
