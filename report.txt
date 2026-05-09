@@ -1,8 +1,0 @@
-Crypto Report - 2026-05-09
-Average Price: 4244.3160920499995
-Top Market Cap: Bitcoin
-Lowest Volume: LEO Token
-Top 3 by Ratio:
-1.LEO Token - 1.9357597857158936e-05
-2.Monero - 3.1669141074506674e-06
-3.Bitcoin - 2.7779611333394674e-06
