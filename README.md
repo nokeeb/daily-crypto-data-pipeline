@@ -33,9 +33,10 @@ Run the pipeline:
 python main.py
 ```
 
----
+
 
 ## Output example (report.txt content)
+```text
 Crypto Report - 2026-05-09
 Average Price: 4244.997577750001
 Top Market Cap: Bitcoin
@@ -44,8 +45,8 @@ Top 3 by Ratio:
 1.LEO Token - 1.9455509660829384e-05
 2.Monero - 3.060533700848879e-06
 3.Bitcoin - 2.875325779057809e-06
+```
 
----
 
 ## Project Structure
 
