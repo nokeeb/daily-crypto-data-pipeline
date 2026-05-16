@@ -18,7 +18,7 @@ This project fetches cryptocurrency data from CoinGecko API, processes it, and g
 Clone the repository:
 
 ```bash
-git clone https://github.com/nokeeb/daily-crypto-data-pipeline.git
+git clone https://github.com/nokeeb/crypto-data-pipeline.git
 ```
 
 Navigate into the project folder:
